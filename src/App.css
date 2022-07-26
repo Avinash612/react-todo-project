@@ -13,14 +13,13 @@
   width: 70px;
   height: 30px;
   padding: 2px 2px;
-  text-align: center;
   display: inline-block;
   font-size: 16px;
   border-radius: 5px;
   border-color: violet;
 }
 
-.add-button a:hover {
+.add-button:hover {
   background-color: violet;
   color: white;
 }
@@ -30,11 +29,12 @@
   text-align: center;
 }
 .unorderedlists {
+  padding-left: 25px;
   color: white;
   font-size: 20px;
   list-style: none;
 }
-.tabs {
+.all-tabs {
   margin-left: 20px;
   background-color: black;
   font-size: 14px;
@@ -46,6 +46,46 @@
   display: inline-block;
   font-size: 12px;
   border-color: violet;
+}
+
+.active-tabs {
+  margin-left: 20px;
+  background-color: black;
+  font-size: 14px;
+  height: 35px;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 12px;
+  border-color: violet;
+}
+
+.completed-tabs {
+  margin-left: 20px;
+  background-color: black;
+  font-size: 14px;
+  height: 35px;
+  border-radius: 5px;
+  color: white;
+  padding: 2px 2px;
+  text-align: center;
+  display: inline-block;
+  font-size: 12px;
+  border-color: violet;
+}
+.all-tabs:hover {
+  background-color: violet;
+  color: white;
+}
+.active-tabs:hover {
+  background-color: violet;
+  color: white;
+}
+.completed-tabs:hover {
+  background-color: violet;
+  color: white;
 }
 .edit-button {
   margin-left: 0px;
@@ -61,6 +101,11 @@
   border-radius: 5px;
   font-size: 12px;
 }
+
+.edit-button:hover {
+  background-color: violet;
+  color: white;
+}
 .delete-button {
   margin-left: 20px;
   background-color: black;
@@ -73,11 +118,16 @@
   font-size: 12px;
   border-radius: 5px;
 }
+.delete-button:hover {
+  background-color: violet;
+  color: white;
+}
 
 .inputbar {
   height: 25px;
   width: 400px;
   align-self: center;
+  position: relative;
 }
 
 .cancel-btn {
@@ -93,7 +143,10 @@
   border-radius: 5px;
   font-size: 12px;
 }
-
+.cancel-button:hover {
+  background-color: violet;
+  color: white;
+}
 .save-btn {
   margin-left: 20px;
   background-color: black;
@@ -105,4 +158,21 @@
   display: inline-block;
   font-size: 12px;
   border-radius: 5px;
+}
+
+.save-btn:hover {
+  background-color: violet;
+  color: white;
+}
+
+@media only screen and (max-width: 500px) {
+  .add-button {
+    text-align: center;
+  }
+  .active-tabs {
+    text-align: center;
+  }
+  .completed-tabs {
+    text-align: center;
+  }
 }
