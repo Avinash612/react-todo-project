@@ -1,24 +1,15 @@
 import React, { useState } from "react";
 /* eslint-disable */
-function Tabs() {
-  const [filterStatus, setFilterStatus] = useState(false);
-  const updateFilter = () => {
-    console.log("clicked on show tasks");
-  };
-  const updateActive = () => {
-    console.log("clicked on active tasks");
-  };
-  const updateCompleted = () => {
-    console.log("clicked on completed tasks");
-  };
+function Tabs({ onAllListClick, onCompletedListClick, onActiveListClick }) {
+  const [isActive, setIsActive] = useState(false);
+
   return (
     <>
       <button
         type="button"
         aria-pressed="false"
-        className="tabs"
-        value={filterStatus}
-        onClick={updateFilter}
+        className="all-tabs"
+        onClick={onAllListClick}
       >
         {/* aria-pressed turns button into toggle button  */}
         Show all tasks
@@ -26,18 +17,16 @@ function Tabs() {
       <button
         type="button"
         aria-pressed="false"
-        className="tabs"
-        value={filterStatus}
-        onClick={updateActive}
+        className="active-tabs"
+        onClick={onActiveListClick}
       >
         Show Active tasks
       </button>
       <button
         type="button"
         aria-pressed="false"
-        className="tabs"
-        value={filterStatus}
-        onClick={updateCompleted}
+        className="completed-tabs"
+        onClick={onCompletedListClick}
       >
         Show Completed tasks
       </button>
